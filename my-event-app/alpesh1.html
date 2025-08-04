@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management </title>
+    <link rel="stylesheet" href="alpesh2.css">
+
+</head>
+
+<body>
+
+<div class="page1">
+    <video autoplay muted loop playsinline class="background-video">
+      <source src="images/vkvideo.mp4" type="video/mp4">
+    </video>
+  <header>
+    <h2> Cricket-Event </h2> 
+    <nav>
+      <ul>
+        <button id="show-events"> Events </button>
+        <li><a href="#register">Register</a></li>
+        <li><a href="#Hosting">Hosting</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <button id="themeToggle"> Dark Mode </button>
+      </ul>
+    </nav>
+  </header>
+  <div id="events-container"></div>
+  <section class="alp1">
+    <h2>Organize or Join Events</h2>
+    <p>Test match | T20 Match | OneDay Match </p>
+  </section>
+  <section id="events1" class="events">
+    <h2>Upcoming Events</h2>
+    <div class="event-list">
+      <div class="event-card">
+        <h3>Test match IND vs AUS </h3>
+        <p>Date: sep 10, 2025</p>
+        <p>Location: Delhi </p>
+      </div>
+      <div class="event-card">
+        <h3>T20 Match IND vs NZ </h3>
+        <p>Date: oct 15, 2025</p>
+        <p>Location: jaipur </p>
+      </div>
+      <div class="event-card">
+        <h3>1DayMatch IND vs PAK</h3>
+        <p>Date: Nov 20, 2025</p>
+        <p>Location: Bengaluru</p>
+      </div>
+    </div>
+  </section>
+</div> 
+
+
+<div id="page2">
+  <section id="register" class="register">
+    <h2>Register for an Event</h2>
+    <form id="registerForm" action="/register" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <select name="event" required>
+        <option value="">Choose an Event</option>
+        <option value="Test Match">Test Match</option>
+        <option value="T20 Match">T20 Match</option>
+        <option value="OneDay Match">OneDay Match</option>
+      </select>
+      <select name="location" required>
+        <option value="">Choose a Location</option>
+        <option value="jaipur">jaipur</option>
+        <option value="Delhi">Delhi</option>
+        <option value="Bengaluru">Bengaluru</option>
+      </select>
+      <input type="date" name="date" required />
+      <button type="submit">Register</button>
+    </form>
+  </section>
+</div>
+
+
+<div id="page3">
+  <section id="Hosting" class="Hosting">
+    <h2>Host a Cricket Tournament</h2>
+    <form id="organizeForm" action="http://localhost:3000/organize" method="POST">
+      <input type="text" name="organizer" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <select name="event" required>
+        <option value="">Choose an Event</option>
+        <option value="Test Match">Test Match</option>
+        <option value="T20 Match">T20 Match</option>
+        <option value="OneDay Match">OneDay Match</option>
+      </select>
+      <select id="eventLocation" name="location" required>
+        <option value="">Choose a Location</option>
+        <option value="jaipur">jaipur </option>
+        <option value="Delhi">Delhi </option>
+        <option value="Bengaluru">Bengaluru</option>
+      </select>
+      <select name="team1" required>
+        <option value="">Team A</option>
+        <option value="IND">IND</option>
+        <option value="PAK">PAK</option>
+        <option value="AUS">AUS</option>
+        <option value="NZ">NZ</option>
+        <option value="ENG"> ENG </option>
+        <option value="SL ">SL</option>
+      </select>
+      <select name="team2" required>
+        <option value="">Team B</option>
+        <option value="IND">IND</option>
+        <option value="PAK">PAK</option>
+        <option value="AUS">AUS</option>
+        <option value="NZ">NZ</option>
+        <option value="ENG"> ENG </option>
+        <option value="SL ">SL</option>
+      </select>
+      <input type="date" id="eventDate" name="date" required />
+      <button type="submit">Submit Tournament</button>
+    </form>
+  </section>
+</div>
+
+
+  <footer id="contact">
+    <p>Contact us: alpeshkumardhansa@gmail.com | +91 6378647773 </p>
+    <p>© 2025 Event. All rights reserved.</p>
+  </footer> 
+
+<script src="alpesh3.js"></script>
+
+</body>
+
+
+</html>
